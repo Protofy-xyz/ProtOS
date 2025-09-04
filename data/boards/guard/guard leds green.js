@@ -1,0 +1,1 @@
+return execute_action('/api/core/v1/devices/guard/subsystems/leds/actions/green', userParams)

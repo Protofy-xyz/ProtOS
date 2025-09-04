@@ -1,0 +1,397 @@
+{
+    "name": "guard",
+    "icon": "openai",
+    "settings": {
+        "backgroundImage": "https://images.ctfassets.net/nnkxuzam4k38/39sOStld2OCyNn3HmCpqco/21d339122a7cb417c83e6ebdc347ea5c/sea-edge-79ab30e2.png"
+    },
+    "layouts": {
+        "lg": [
+            {
+                "w": 23,
+                "h": 4,
+                "x": 0,
+                "y": 0,
+                "i": "value_1750261498829",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 11,
+                "h": 5,
+                "x": 0,
+                "y": 4,
+                "i": "value_1756991057723",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 12,
+                "h": 5,
+                "x": 11,
+                "y": 4,
+                "i": "value_1756991075356",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 15,
+                "h": 7,
+                "x": 23,
+                "y": 0,
+                "i": "action_1756993508921",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 15,
+                "h": 7,
+                "x": 38,
+                "y": 0,
+                "i": "action_1756993517298",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 23,
+                "h": 7,
+                "x": 0,
+                "y": 9,
+                "i": "value_1756993551463",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 57,
+                "h": 22,
+                "x": 23,
+                "y": 7,
+                "i": "value_1756994386239",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 23,
+                "h": 13,
+                "x": 0,
+                "y": 16,
+                "i": "action_1756994544252",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            }
+        ],
+        "md": [
+            {
+                "w": 15,
+                "h": 4,
+                "x": 0,
+                "y": 0,
+                "i": "value_1750261498829",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 8,
+                "h": 5,
+                "x": 0,
+                "y": 4,
+                "i": "value_1756991057723",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "w": 8,
+                "h": 5,
+                "x": 8,
+                "y": 4,
+                "i": "value_1756991075356",
+                "moved": false,
+                "static": false,
+                "isResizable": true
+            },
+            {
+                "i": "action_1756993508921",
+                "x": 46,
+                "y": 31,
+                "w": 15,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "action_1756993517298",
+                "x": 0,
+                "y": 38,
+                "w": 15,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "value_1756993551463",
+                "x": 15,
+                "y": 44,
+                "w": 8,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "value_1756994386239",
+                "x": 23,
+                "y": 48,
+                "w": 23,
+                "h": 9,
+                "isResizable": true
+            },
+            {
+                "i": "action_1756994544252",
+                "x": 46,
+                "y": 56,
+                "w": 15,
+                "h": 16,
+                "isResizable": true
+            }
+        ],
+        "sm": [
+            {
+                "w": 2,
+                "h": 5,
+                "x": 0,
+                "y": 14,
+                "i": "value_1750261498829",
+                "moved": false,
+                "static": false
+            },
+            {
+                "i": "value_1756991057723",
+                "x": 0,
+                "y": 19,
+                "w": 1,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "value_1756991075356",
+                "x": 1,
+                "y": 23,
+                "w": 1,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "action_1756993508921",
+                "x": 0,
+                "y": 53,
+                "w": 1,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "action_1756993517298",
+                "x": 1,
+                "y": 59,
+                "w": 1,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "value_1756993551463",
+                "x": 0,
+                "y": 66,
+                "w": 1,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "value_1756994386239",
+                "x": 0,
+                "y": 71,
+                "w": 2,
+                "h": 9,
+                "isResizable": true
+            },
+            {
+                "i": "action_1756994544252",
+                "x": 0,
+                "y": 80,
+                "w": 1,
+                "h": 16,
+                "isResizable": true
+            }
+        ],
+        "xs": [
+            {
+                "w": 1,
+                "h": 5,
+                "x": 0,
+                "y": 14,
+                "i": "value_1750261498829",
+                "moved": false,
+                "static": false
+            },
+            {
+                "i": "value_1756991057723",
+                "x": 0,
+                "y": 19,
+                "w": 1,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "value_1756991075356",
+                "x": 0,
+                "y": 24,
+                "w": 1,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "action_1756993508921",
+                "x": 0,
+                "y": 54,
+                "w": 1,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "action_1756993517298",
+                "x": 0,
+                "y": 61,
+                "w": 1,
+                "h": 7,
+                "isResizable": true
+            },
+            {
+                "i": "value_1756993551463",
+                "x": 0,
+                "y": 68,
+                "w": 1,
+                "h": 5,
+                "isResizable": true
+            },
+            {
+                "i": "value_1756994386239",
+                "x": 0,
+                "y": 73,
+                "w": 1,
+                "h": 9,
+                "isResizable": true
+            },
+            {
+                "i": "action_1756994544252",
+                "x": 0,
+                "y": 82,
+                "w": 1,
+                "h": 16,
+                "isResizable": true
+            }
+        ]
+    },
+    "cards": [
+        {
+            "key": "value_1750261498829",
+            "width": 4,
+            "height": 4,
+            "icon": "key",
+            "name": "Key Setter",
+            "description": "Displays a key setter for a specific key or in case already set displays key is set",
+            "type": "value",
+            "params": {
+                "nameKey": "The key name to set"
+            },
+            "configParams": {
+                "nameKey": {
+                    "visible": true,
+                    "defaultValue": "OPENAI_API_KEY"
+                }
+            }
+        },
+        {
+            "key": "value_1756991057723",
+            "width": 1,
+            "height": 4,
+            "icon": "squircle",
+            "name": "guard button1",
+            "description": "Get binary sensor status",
+            "type": "value",
+            "color": "#dbdbdb"
+        },
+        {
+            "key": "value_1756991075356",
+            "width": 1,
+            "height": 4,
+            "icon": "squircle",
+            "name": "guard button2",
+            "description": "Get binary sensor status",
+            "type": "value",
+            "color": "#dbdbdb"
+        },
+        {
+            "key": "action_1756993508921",
+            "width": 2,
+            "height": 6,
+            "icon": "zap",
+            "name": "guard leds red",
+            "description": "Turns on the neopixels in red",
+            "params": {},
+            "type": "action"
+        },
+        {
+            "key": "action_1756993517298",
+            "width": 2,
+            "height": 6,
+            "icon": "zap",
+            "name": "guard leds green",
+            "description": "Turns on the neopixels in green",
+            "params": {},
+            "type": "action"
+        },
+        {
+            "key": "value_1756993551463",
+            "width": 1,
+            "height": 4,
+            "icon": "rss",
+            "type": "value",
+            "name": "lastCreated states",
+            "description": "Last Created states"
+        },
+        {
+            "key": "value_1756994386239",
+            "width": 3,
+            "height": 8,
+            "icon": "table-properties",
+            "name": "Table",
+            "description": "Displays a table with the last states",
+            "type": "value"
+        },
+        {
+            "key": "action_1756994544252",
+            "width": 2,
+            "height": 14,
+            "icon": "file-plus",
+            "displayResponse": true,
+            "name": "create states",
+            "type": "action",
+            "description": "Creates a states given its content. Returns the created states.",
+            "params": {
+                "id": " (string) (this will be used as the id of the element)",
+                "status": " (string)",
+                "timestamp": " (default)"
+            }
+        }
+    ],
+    "autopilot": false,
+    "rules": [
+        "guard button1 y guard button2 son dos botones que por defecto están en ON y cuando se pulsan pasan mientras están pulsados a OFF",
+        "Cada vez que uno de los dos botones cambie a OFF debe guardarse un nuevo state en la base de datos. Si se pulsa el button1 debe guardarse status green y si se pulsa el button2 debe guardarse status red",
+        "si el lastCreated states tiene status green debemos ejecutar guard leds green y si el lastCreated states tiene status red debemos ejecutar guard leds red"
+    ],
+    "version": 42
+}

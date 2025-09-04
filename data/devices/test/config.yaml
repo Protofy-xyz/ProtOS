@@ -1,0 +1,60 @@
+esphome:
+  platformio_options:
+    board_build.flash_mode: dio
+    board_build.arduino.memory_type: opi_opi
+    board_upload.maximum_ram_size: 524288
+    build_flags:
+      - '-DBOARD_HAS_PSRAM'
+      - '-DARDUINO_USB_CDC_ON_BOOT=1'
+      - '-mfix-esp32-psram-cache-issue'
+  name: test
+esp32:
+  board: esp32-s3-devkitc-1
+  variant: esp32s3
+  flash_size: 16Mb
+  framework:
+    type: arduino
+logger: {}
+servo:
+  id: servomot
+  output: servomotledcOutput
+  auto_detach_time: 0s
+  transition_length: 0s
+  min_level: 2.5%
+  idle_level: 7.5%
+  max_level: 12.5%
+output:
+  platform: ledc
+  id: servomotledcOutput
+  pin: TX
+  frequency: 50 Hz
+mqtt:
+  on_message:
+    - topic: devices/test/servo/servomot/command
+      then:
+        - lambda: |-
+            float value = atoi(x.c_str());
+            if(value >= 0 && value <= 180) id(servomot).write(-(90-value)/90);
+            if(value > 180) id(servomot).write(1.0);
+            if(value < 0) id(servomot).write(-1.0);
+  on_json_message:
+    - topic: devices/test/light/leds/individual_control/command
+      then:
+        light.addressable_set:
+          id: leds
+          range_from: !lambda "return (int)(x[\"from\"]);"
+          range_to: !lambda "int t=(int)(x[\"from\"]); if (x.containsKey(\"to\")) t=x[\"to\"]; return t;"
+          red: !lambda "return (float)((int)x[\"red\"]) / 255.0;"
+          green: !lambda "return (float)((int)x[\"green\"]) / 255.0;"
+          blue: !lambda "return (float)((int)x[\"blue\"]) / 255.0;"
+light:
+  platform: esp32_rmt_led_strip
+  pin: 38
+  name: leds
+  id: leds
+  chipset: WS2811
+  num_leds: '9'
+  rgb_order: GRB
+  restore_mode: ALWAYS_ON
+  default_transition_length: 1s
+  rmt_channel: '0'

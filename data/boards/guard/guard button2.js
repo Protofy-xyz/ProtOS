@@ -1,0 +1,1 @@
+return states['devices']['guard']['button2']

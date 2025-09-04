@@ -1,0 +1,64 @@
+esphome:
+  platformio_options:
+    board_build.flash_mode: dio
+    board_build.arduino.memory_type: opi_opi
+    board_upload.maximum_ram_size: 524288
+    build_flags:
+      - '-DBOARD_HAS_PSRAM'
+      - '-DARDUINO_USB_CDC_ON_BOOT=1'
+      - '-mfix-esp32-psram-cache-issue'
+  name: guard
+esp32:
+  board: esp32-s3-devkitc-1
+  variant: esp32s3
+  flash_size: 16Mb
+  framework:
+    type: arduino
+logger: {}
+mqtt:
+  broker: 192.168.0.53
+  port: 1883
+  topic_prefix: devices/guard
+  username: guard
+  password: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Imd1YXJkIiwidHlwZSI6ImRldmljZSIsImFkbWluIjpmYWxzZSwiaWF0IjoxNzU2OTg4OTk3LCJleHAiOjE5MTQ3NzY5OTd9.psMNLLHSSN7AGkNqK5QBsF6u6DRAFv3FW62Peu_3PUc
+  on_json_message:
+    - topic: devices/guard/light/leds/individual_control/command
+      then:
+        light.addressable_set:
+          id: leds
+          range_from: !lambda "return (int)(x[\"from\"]);"
+          range_to: !lambda "int t=(int)(x[\"from\"]); if (x.containsKey(\"to\")) t=x[\"to\"]; return t;"
+          red: !lambda "return (float)((int)x[\"red\"]) / 255.0;"
+          green: !lambda "return (float)((int)x[\"green\"]) / 255.0;"
+          blue: !lambda "return (float)((int)x[\"blue\"]) / 255.0;"
+wifi:
+  ssid: DEMOFY
+  password: PR0T0FY100
+  power_save_mode: none
+improv_serial: {}
+binary_sensor:
+  - platform: gpio
+    pin: 44
+    name: button1
+    id: button1
+    filters:
+      - delayed_off: 100ms
+      - delayed_on: 100ms
+  - platform: gpio
+    pin: 21
+    name: button2
+    id: button2
+    filters:
+      - delayed_off: 100ms
+      - delayed_on: 100ms
+light:
+  platform: esp32_rmt_led_strip
+  pin: 38
+  name: leds
+  id: leds
+  chipset: WS2811
+  num_leds: '9'
+  rgb_order: GRB
+  restore_mode: ALWAYS_ON
+  default_transition_length: 1s
+  rmt_channel: '0'
